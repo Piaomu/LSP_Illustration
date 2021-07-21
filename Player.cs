@@ -38,7 +38,7 @@ namespace LSP_Illustration
         }
         public virtual void Substitution(Player teammate)
         {
-            Console.WriteLine($"You're in for {teammate}");
+            Console.WriteLine($"{FirstName} {LastName}, you're in for {teammate}");
         }
     }
 }
