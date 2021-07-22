@@ -11,6 +11,7 @@ namespace LSP_Illustration
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public bool NeedsOut { get; set; }
+        public string[] Skills { get; set; } = new string[3] {"dribbling", "shooting", "passing" };
         public virtual void ShouldPlay(int fouls, int minutesPlayed)
         {
             if (minutesPlayed > 35)

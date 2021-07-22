@@ -36,6 +36,7 @@ namespace LSP_Illustration
             celebrity.LastName = "Murray";
             celebrity.ShouldPlay(0, 0);
 
+
             Console.ReadLine();
         }
     }
