@@ -6,26 +6,26 @@ using System.Threading.Tasks;
 
 namespace LSP_Illustration
 {
-    class Player
+    class BasePlayer : IPlayer
     {
         public string FirstName { get; set; }
-        public string LastName { get; set; }  
+        public string LastName { get; set; }
         public bool NeedsOut { get; set; }
         public virtual void ShouldPlay(int fouls, int minutesPlayed)
         {
-            if(minutesPlayed > 35)
+            if (minutesPlayed > 35)
             {
                 Console.WriteLine($"{FirstName} {LastName}: Take me out, coach");
                 NeedsOut = true;
             }
-            
-            else if(fouls > 5)
+
+            else if (fouls > 5)
             {
                 Console.WriteLine($"{FirstName} {LastName}: I fouled out, coach");
                 NeedsOut = true;
             }
 
-            else if(fouls > 3 && minutesPlayed < 20 )
+            else if (fouls > 3 && minutesPlayed < 20)
             {
                 Console.WriteLine($"{FirstName} {LastName}: I played too hard, coach");
                 NeedsOut = true;
@@ -36,7 +36,7 @@ namespace LSP_Illustration
                 NeedsOut = false;
             }
         }
-        public virtual void Substitution(Player teammate)
+        public virtual void Substitution(IPlayer teammate)
         {
             Console.WriteLine($"{FirstName} {LastName}, you're in for {teammate}");
         }

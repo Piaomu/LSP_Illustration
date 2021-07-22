@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace LSP_Illustration
 {
-    class SmallForward : BasePlayer, IPlayer
+    interface IBillMurray
     {
-        public string[] Skills { get; set; } = new string[3] { "shooting", "dribbling", "blocking" };
+        string[] Skills { get; set; }
+
     }
 }

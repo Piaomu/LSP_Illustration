@@ -6,11 +6,8 @@ using System.Threading.Tasks;
 
 namespace LSP_Illustration
 {
-    class BillMurray : Player
+    class BillMurray : BasePlayer, IBillMurray
     {
-        public override void Substitution(Player teammate)
-        {
-            throw new InvalidOperationException("Bill Murray? Really?");
-        }
+        string[] IBillMurray.Skills { get; set; } = new string[2] { "Moral Support", "Joke-telling" };
     }
 }

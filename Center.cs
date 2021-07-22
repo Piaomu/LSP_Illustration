@@ -6,18 +6,8 @@ using System.Threading.Tasks;
 
 namespace LSP_Illustration
 {
-    class Center : Player
+    class Center : BasePlayer, IPlayer
     {
-        public override void Substitution(Player teammate)
-        {
-            if (teammate is Center)
-            {
-                Console.WriteLine($"You're in for {teammate}");
-            }
-            else
-            {
-                Console.WriteLine($"{teammate} is not a Center");
-            }
-        }
+        public string[] Skills { get; set; } = new string[3] { "dunking", "rebounding", "blocking" };
     }
 }

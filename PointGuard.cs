@@ -6,18 +6,8 @@ using System.Threading.Tasks;
 
 namespace LSP_Illustration
 {
-    class PointGuard : Player
+    class PointGuard : BasePlayer, IPlayer
     {
-        public override void Substitution(Player teammate)
-        {
-            if(teammate is PointGuard)
-            {
-                Console.WriteLine($"You're in for {teammate}");
-            }
-            else
-            {
-                Console.WriteLine($"{teammate} is not a Point Guard");
-            }
-        }
+        public string[] Skills { get; set; } = new string[3] { "shooting", "dribbling", "passing" };
     }
 }

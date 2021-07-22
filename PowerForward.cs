@@ -6,18 +6,8 @@ using System.Threading.Tasks;
 
 namespace LSP_Illustration
 {
-    class PowerForward : Player
+    class PowerForward : BasePlayer, IPlayer
     {
-        public override void Substitution(Player teammate)
-        {
-            if (teammate is PowerForward)
-            {
-                Console.WriteLine($"You're in for {teammate}");
-            }
-            else
-            {
-                Console.WriteLine($"{teammate} is not a Power Forward");
-            }
-        }
+        public string[] Skills { get; set; } = new string[3] { "shooting", "rebounding", "blocking" };
     }
 }
